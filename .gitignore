@@ -1,0 +1,42 @@
+# Folders to ignore, whatever the place they are
+ 
+.metadata
+classes
+hybris/bin/**/bin
+bin/custom/**/eclipsebin
+gensrc
+ 
+# Folders to ignore at the root of the repository
+log/
+temp/
+data/
+licenses/
+hybris/sampleconfigurations/
+
+# Allow only local.properties and localextensions.xml
+config/*
+!config/local.properties
+!config/localextensions.xml
+
+  
+# filter only custom extension
+bin/*
+!bin/custom/
+
+# Filename patterns to ignore
+*.class
+build.xml
+Generated*.java
+platformhome.properties
+*testclasses.xml
+extensioninfo.xsd
+*hmc.jar
+hmc.xsd
+items.xsd
+beans.xsd
+ruleset.xml
+*.log
+base.properties
+
+idea-module-files
+.idea
