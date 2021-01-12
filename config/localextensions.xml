@@ -51,5 +51,6 @@
     <extension name='consignmenttrackingoccaddon' />
     <extension name='customerinterestsoccaddon' />
     <extension name='notificationoccaddon' />
+    <extension name='customextension' />
   </extensions>
 </hybrisconfig>
