@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+ Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved
+-->
+<config xmlns="http://www.hybris.com/cockpit/config"
+        xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+
+    <context merge-by="type" parent="GenericItem" type="Product" component="editor-area">
+        <editorArea:editorArea name="">
+            <editorArea:tab name="hmc.tab.product.properties" position="2">
+                <editorArea:section name="hmc.product.descriptions">
+                    <editorArea:attribute qualifier="additionalDescription" label="hmc.product.additionalDescription"/>
+                </editorArea:section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+</config>
