@@ -14,4 +14,14 @@
             </editorArea:tab>
         </editorArea:editorArea>
     </context>
+
+    <context merge-by="type" parent="Product" type="ProductBundle" component="editor-area">
+        <editorArea:editorArea name="">
+            <editorArea:tab name="hmc.tab.product.properties" position="2">
+                <editorArea:section name="hmc.product.section.bundle">
+                    <editorArea:attribute qualifier="productsList" label="hmc.product.productsList"/>
+                </editorArea:section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
 </config>
