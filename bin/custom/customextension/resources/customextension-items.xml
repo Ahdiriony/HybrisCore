@@ -26,5 +26,15 @@
                 </attribute>
             </attributes>
         </itemtype>
+        <itemtype code="Customer" generate="false" autocreate="false">
+            <attributes>
+                <attribute qualifier="customerDescription" type="java.lang.String">
+                    <description>Customer description in format "Name: Email. Order quantity is "Orders.size"</description>
+                    <persistence type="dynamic" attributeHandler="customerDescriptionDynamicAttributeHandler"/>
+                    <modifiers read="true" write="false"/>
+                </attribute>
+            </attributes>
+        </itemtype>
+
     </itemtypes>
 </items>
