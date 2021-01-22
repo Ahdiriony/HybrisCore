@@ -30,11 +30,18 @@
             <attributes>
                 <attribute qualifier="customerDescription" type="java.lang.String">
                     <description>Customer description in format "Name: Email. Order quantity is "Orders.size"</description>
-                    <persistence type="dynamic" attributeHandler="customerDescriptionDynamicAttributeHandler"/>
+                    <persistence type="dynamic" attributeHandler="customerDescriptionAttributeHandler"/>
                     <modifiers read="true" write="false"/>
                 </attribute>
             </attributes>
         </itemtype>
-
+        <itemtype code="ImageMedia" extends="Media" generate="true" autocreate="true">
+            <attributes>
+                <attribute qualifier="topic" type="java.lang.String">
+                    <description>Custom attribute for trainining purpose</description>
+                    <persistence type="property"/>
+                </attribute>
+            </attributes>
+        </itemtype>
     </itemtypes>
 </items>

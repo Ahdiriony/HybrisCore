@@ -3,7 +3,12 @@
  Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved
 -->
 <config xmlns="http://www.hybris.com/cockpit/config"
-        xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea">
+        xmlns:editorArea="http://www.hybris.com/cockpitng/component/editorArea"
+        xmlns:list-view="http://www.hybris.com/cockpitng/component/listView"
+        xmlns:advanced-search="http://www.hybris.com/cockpitng/config/advancedsearch"
+        xmlns:simple-search="http://www.hybris.com/cockpitng/config/simplesearch"
+        xmlns:explorer-tree="http://www.hybris.com/cockpitng/config/explorertree"
+>
 
     <context merge-by="type" parent="GenericItem" type="Product" component="editor-area">
         <editorArea:editorArea name="">
@@ -23,5 +28,48 @@
                 </editorArea:section>
             </editorArea:tab>
         </editorArea:editorArea>
+    </context>
+
+    <context merge-by="type" parent="Media" type="ImageMedia" component="editor-area">
+        <editorArea:editorArea name="">
+            <editorArea:tab name="hmc.tab.imageMedia.topic">
+                <editorArea:section name="hmc.imageMedia.section.topic">
+                    <editorArea:attribute qualifier="topic" label="hmc.imageMedia.topic"/>
+                </editorArea:section>
+            </editorArea:tab>
+        </editorArea:editorArea>
+    </context>
+
+    <context component="explorer-tree">
+        <explorer-tree:explorer-tree>
+            <explorer-tree:navigation-node id="hmc_treenode_medias">
+                <explorer-tree:type-node code="ImageMedia" id="hmc_typenode_imagemedia"/>
+            </explorer-tree:navigation-node>
+        </explorer-tree:explorer-tree>
+    </context>
+
+    <!-- Result Area !-->
+
+    <context type="ImageMedia" component="listview" merge-by="type" parent="Media">
+        <list-view:list-view>
+            <list-view:column qualifier="topic"/>
+        </list-view:list-view>
+    </context>
+
+    <!-- Search Area  !-->
+
+    <context type="ImageMedia" component="advanced-search"
+             merge-by="type" parent="Media">
+        <advanced-search:advanced-search>
+            <advanced-search:field-list>
+                <advanced-search:field name="topic" operator="equals" selected="true"/>
+            </advanced-search:field-list>
+        </advanced-search:advanced-search>
+    </context>
+
+    <context type="ImageMedia" component="simple-search" merge-by="type" parent="Media">
+        <simple-search:simple-search>
+            <simple-search:field name="topic"/>
+        </simple-search:simple-search>
     </context>
 </config>

@@ -20,7 +20,7 @@
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
 
-    <bean id="customerDescriptionDynamicAttributeHandler"
-          class="org.training.catalog.dynamic.CustomerDescriptionDynamicAttributeHandler"/>
+    <bean id="customerDescriptionAttributeHandler"
+          class="org.training.catalog.dynamic.CustomerDescriptionAttributeHandler"/>
 
 </beans>
